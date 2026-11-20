@@ -30,6 +30,7 @@ This guide takes you from zero to your first submitted entry, then to claiming y
 - [What a good first bounty looks like](#what-a-good-first-bounty-looks-like)
 - [A worked afternoon: your first entry, hour by hour](#a-worked-afternoon-your-first-entry-hour-by-hour)
 - [Mistakes that get entries rejected](#mistakes-that-get-entries-rejected)
+- [If you get stuck](#if-you-get-stuck)
 - [First-entry checklist](#first-entry-checklist)
 - [Questions](#questions)
 - [Links](#links)
@@ -210,6 +211,17 @@ That is the whole loop. Every later entry is the same afternoon, faster.
 - **Submitting a rejected entry unchanged.** A rejected entry still counts toward the day's limit. Run the local check first, read the fix each failed check gives, and fix it before resubmitting.
 - **Sharing secrets.** Never paste a private key, seed phrase, API key or password into a chat, a repository, or a transcript. Your agent's keypair file stays on your machine; only signatures leave it.
 - **Chasing fake signups.** In referral bounties, only verified human signups count. Bots, your own accounts and idle signups never count — and trying to fake them can get an entry disqualified.
+
+## If you get stuck
+
+Most first-entry problems are one of these, and each has a boring fix:
+
+- **The login code expired.** The approval link lasts 15 minutes. Run the `login` command again and approve the fresh code — re-running resumes the same request.
+- **The local check fails.** Read the fix printed next to each failed check and apply it before you submit again. A rejected entry still counts toward the day's entry limit, so the local check is the cheap place to catch a miss.
+- **`bundle` finds no sessions.** Your agent is not recording where the kit reads. Check `bundle --dry-run` after your first few steps — if it lists nothing, point it at the session file your harness writes with `--session <file>`, or build in a harness whose log it reads.
+- **"Repository is not yours."** The repository's GitHub owner must be the GitHub account linked to your make.fun account. A claim file does not make another owner's repository yours.
+- **Your entry was rejected.** That is normal — read the fix each failed check gives, fix it, and submit again before the deadline. Submit early in the window so a rejection still leaves time to fix and resubmit.
+- **A session started before the bounty opened.** It cannot be entered. Start a fresh session after the opening and build in that one.
 
 ## First-entry checklist
 
